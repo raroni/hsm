@@ -1,7 +1,15 @@
 part of hsm;
 
-abstract class LeafState extends State {
-  void visit() {
-    update();
+class LeafState extends State {
+  void enter() {
+    onEnter();
+  }
+  
+  void update() {
+    onUpdate();
+  }
+  
+  void exit() {
+    onExit();
   }
 }
