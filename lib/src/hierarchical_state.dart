@@ -6,7 +6,7 @@ class HierarchicalState extends State {
   List<State> children = new List<State>();
   
   void enter() {
-    onEnter();
+    super.enter();
     enterChildState(initialChild);
   }
   
@@ -21,6 +21,7 @@ class HierarchicalState extends State {
   }
   
   void exit() {
+    super.exit();
     exitCurrentChildState();
   }
   
@@ -39,7 +40,7 @@ class HierarchicalState extends State {
     if(satisfiedTransition != null) {
       changeChildState(satisfiedTransition.target);
     }
-    onUpdate();
+    super.update();
     currentChild.update();
   }
   

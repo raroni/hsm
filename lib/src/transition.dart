@@ -5,4 +5,8 @@ abstract class Transition {
   bool get isSatisfied;
   
   Transition(State this.target);
+  
+  void onEnter() { }
+  
+  void onExit() { }
 }
